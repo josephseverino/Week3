@@ -9,8 +9,13 @@
      
         <button ng-click="ButtonNoise()">Click Me For cool message!!!
         </button>
-        <button ng-click ="unorderedList()"> Click me for an unordered list</button>
-          
+        
+         
+            <button ng-click = "listStudents=true" ng-init="students=['John', 'Mary', 'Kenneth', 'Holly']">Click for List </button>
+            <ul ng-show="listStudents">
+                <li ng-repeat="student in students">{{student}}</li>
+            </ul>
+       
     
     </body>
 </html>

@@ -9,9 +9,19 @@ angular.module('MyFirstAngular')
     
     function firstCtrl($scope){
         console.log('Controller is working!')
-        
+        $scope.unorderedList = function(){
+            
+        }
         $scope.ButtonNoise = function(){
             console.log('here is a message in the console.log as requested')
             $scope.newGreeting = 'When you click me, I will create a heading for the body';
+        }
+        
+        $scope.list = function() {
+          $scope.listDevelopment 
+        }
+        
+        $scope.listStudent =function(){
+            $scope.studentList = student
         }
     }
