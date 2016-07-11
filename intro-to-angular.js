@@ -24,4 +24,9 @@ angular.module('MyFirstAngular')
         $scope.listStudent =function(){
             $scope.studentList = student
         }
+        .red {
+            color:red;
+        }
     }
+
+
