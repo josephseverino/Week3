@@ -20,13 +20,24 @@ angular.module('MyFirstAngular')
         $scope.list = function() {
           $scope.listDevelopment 
         }
+       
+        $scope.showConfirm = function(){
+          
+         
+            var r = confirm("Are you sure you to navigate there?");
+            if (r == true) {
+                window.location = this.href;
+            } else{
+                event.preventDefault();
+              $scope.hide =false;
+            }
+                
+        }
         
-        $scope.listStudent =function(){
-            $scope.studentList = student
-        }
-        .red {
-            color:red;
-        }
+        
+            
+        
     }
+  
 
 
