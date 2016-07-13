@@ -8,6 +8,12 @@ angular.module('MyFirstAngular')
     ]);
     
     function firstCtrl($scope){
+        
+         $scope.show_alert_message = false;
+        $scope.alert_message = "I'm an alert message!";
+        
+        
+        
         console.log('Controller is working!')
         $scope.unorderedList = function(){
             
@@ -34,10 +40,11 @@ angular.module('MyFirstAngular')
                 
         }
         
-        
+       
             
         
     }
   
+
 
 

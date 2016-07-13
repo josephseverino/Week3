@@ -13,6 +13,22 @@
         p:hover {
             color:pink;
         }
+        .buttonSize{
+            height:100px;
+            width:300px;
+            font-size:25px;
+            color:white;
+            background-color:blue;
+        }
+        .alert-message-container{
+            position:fixed;
+            height:1000px;
+            width:100%;
+            background-color:rgba(1,1,1,.20);
+            z-index:9;
+            
+           
+        }
         </style>
         
     </head>
@@ -70,7 +86,19 @@
 
 
         </p>
+     
+              <button class="buttonSize" type="button" ng-click="show_alert_message=!show_alert_message">Show/Hide</button>
+  
        
+       </div>
     </div> 
+     
+        <div style="text-align:center;">
+           <div 
+           ng-show="show_alert_message" 
+           ng-bind="alert_message"
+           class="alert-message-container"
+           ng-click="show_alert_message=!show_alert_message"
+            >
     </body>
 </html>
