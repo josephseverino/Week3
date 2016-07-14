@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="MasterApp">
+    <head>
+        <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+        <script type="text/javascript" src="bigButton.js"></script>
+        <style>
+            .container1{
+                height:550px;
+                width:100%;
+                padding-top:100px;
+                text-align:center;
+                z-index:0;
+                background-color:#DDD;
+                
+            }
+            .containerBttn {
+                height:300px;
+                width:600px;
+              
+                background-color:#8A8CEE;
+                color:white;
+                font-size:30px;
+                border-radius:20px;
+              
+                
+            }
+            .container2{
+                position:fixed;
+                top:0;
+                right:10%;
+             
+                width: 80%;
+                height:500px;
+                border: 10px solid #111;
+                z-index:1;
+                background-color:rgba(255, 140, 214, 0.5);
+                font-size:60px;
+                
+                
+            }
+            .flexcontainer {
+               display: -webkit-flex;
+               display: flex;
+               -webkit-flex-direction: column;
+               flex-direction: column;
+               -webkit-align-items: flex-end;
+               align-items: flex-end;
+               
+
+            }
+            
+        </style>
+    </head>
+    <body ng-controller="Controller1 as myCtrl">
+        <div class="container1">
+            <button class="containerBttn" ng-click="showDetails = ! showDetails">
+                PRESS THE BIG BUTTON
+            </button>
+            <div  class="container2" ng-show="showDetails">
+               
+                <div class="flexcontainer">
+                <button ng-click="showDetails = ! showDetails"> X (EXIT) </button>
+                 
+                </div>
+                <h3 >here is a popup...sort of</h6>
+            </div>
+        </div>
+        <div >
+            
+        </div>
+    </body>
+</html>
+               
+               
+               
