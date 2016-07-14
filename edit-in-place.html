@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="Master">
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+		<script src="edit-in-place.js"></script>
+		<style>
+		  
+		    html {
+                  background-color:#EEE;
+		    }
+		    .container {
+		        width:30%;
+		        height:800px;
+		        background-color:white;
+		        margin:auto;
+		        border-radius:5px;
+		        border: 2px #BBB solid;
+		        padding:10px;
+		   
+		        
+		    }
+		    input[type=text] {
+                padding:15px; 
+                border:2px solid #ccc; 
+                -webkit-border-radius: 5px;
+                border-radius: 5px;
+                display:block;
+                position:relative;
+              
+                font-size:18px;
+            }
+            
+            input[type=text]:focus {
+                border-color:#333;
+                display:block;
+                padding:15px 15px 15px 0px;
+                position:relative;
+               
+                font-size:18px;
+            }
+            
+            input[type=submit] {
+                padding:15px 15px 15px 0px;
+                width:15%;
+                background-color: rgba(0, 172, 255, 1); 
+                border:0 none;
+                cursor:pointer;
+                -webkit-border-radius: 5px;
+                border-radius: 5px; 
+                display:block;
+                position:relative;
+               
+                font-size:18px;
+                color:white;
+                
+            }
+            input[type=textarea]{
+                width:400px;
+                height:250px;
+                display:block;
+                border-radius: 5px; 
+                padding:15px 15px 15px 0px;
+                position:relative;
+                
+                font-size:18px;
+                
+            }
+            .format {
+                position:relative;
+                left:75px;
+                font-size:20px;
+            }
+		</style>
+		<body ng-controller="Minion as mini">
+        		    <div class="container">
+        		        <form  class="format"action="#" method="post">
+                            Name <input type="text" placeholder="First name"/>
+                            <input type="text" placeholder="Last name"/>
+                            Email <input type="text" placeholder="youremail@mail.com"/>
+                            Message <input type="textarea"/>
+                            <input type="submit" value="Send"/>
+                            Profile Picture<input type="text" placeholder="URL">
+                            </form>
+		        
+		 
+		    </div>
+		</body>
+    </head>
+</html>
