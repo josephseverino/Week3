@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="weddingBells">
+    <head>
+        <title>Angular Recap</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+        <script src="js/main.js"></script>
+    </head>
+    <body class="container">
+        <section ng-contoller="ballAndChain as love">
+            <h2>Metrics</h2>
+            <ul>
+                <li>{{love.averageAgeValue}}</li>
+            </ul>
+            
+            
+            <div ng-repeat="couple in love.info">
+                <h1>{{couple.year}}, duration: {{couple.duration}}</h1>
+            <table  class="table table-striped">
+                <!--<caption>U.S. Divorce Rates</caption>-->
+                <thead>
+                    <tr>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Occupation</th>
+                        <th>Education</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="spouses in love.info">
+                        <th>{{spouses.age}}</th>
+                        <th>{{spouses.gender}}</th>
+                        <th>{{spouses.occupation}}</th>
+                        <th>{{spouses.education}}</th>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    
+                </tfoot>
+            </table>
+            </div>
+        </section>
+    </body>
+    
+</html>

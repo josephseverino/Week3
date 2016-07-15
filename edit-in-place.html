@@ -33,7 +33,7 @@
 		    
 		   
 		    .container {
-		        width:30%;
+		        width:50%;
 		        height:800px;
 		        background-color:white;
 		        margin:auto;
@@ -93,25 +93,17 @@
                 font-size:18px;
                 
             }
-            .format {
-                position:relative;
-                left:75px;
-                font-size:20px;
+            #position {
+                float:right;
+                top:5%;
+                left:5%;
             }
-            button {
-               display: -webkit-flex;
-               display: flex;
-               -webkit-flex-direction: column;
-               flex-direction: column;
-               -webkit-align-items: flex-end;
-               align-items: flex-end;
-               
-            }
+           
 		</style>
 		</head>
 		<body ng-controller="Minion as mini">
 		    <div class="profileContainer">
-		             <button  ng-click="showDetails = !showDetails">X</button>
+		             <button  id="position"ng-click="showDetails = !showDetails"><img src="https://maxcdn.icons8.com/windows10/PNG/512/User_Interface/details_popup-512.png" height="25px" width="25px"></img></button>
 		            <img src="http://mindcorp.co.uk/wp-content/uploads/2013/10/anonymous-profile.jpg" height="100px" width="100px">
 		        
 		            
@@ -126,7 +118,7 @@
 		          <div class="blurrBackground" ng-show="showDetails">
         		        <div class="container" >
         		            <form  class="format"action="#" method="post">
-        		              <button ng-click="showDetails = ! showDetails"> X (EXIT) </button>
+        		              <button  id="position" ng-click="showDetails = ! showDetails"> <img src="http://wppopupmagic.com/divi/wp-content/uploads/2014/11/icon-external-link.png" height="25px" width="25px"></img></button>
                             Name <input type="text" placeholder="First name"/>
                            
                             <input type="text" placeholder="Last name"/>
