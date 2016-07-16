@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="Master">
+    <head>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+        <script src="gold-rush.js"> </script>
+        <style>
+            .markerStyle{
+                height:20px; width:20px; position:absolute; display:inline-block;background-color:red;
+            }
+            .img-container{
+                position:absolute;
+            }
+            .parentContainer{
+                height:100vh;
+                width:100vw;
+            }
+            .mapImg{
+                height:100%;
+                width:100%;
+              
+            }
+        </style>
+    </head>
+    <body ng-controller="minion as mini">
+       <div class="parentContainer">
+            <img ng-click="mini.addMarker($event)" src="https://raw.githubusercontent.com/svangordon/goldrush/master/topo-map.jpg" class="mapImg" >
+               
+                <div ng-repeat="mini.array.marker in array" class="img-container">
+                  <div   ng-show="marker.show" ng-click="marker.show=false" class="markerStyle"></div>
+                </div>   
+               
+       </div> 
+        
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="Master">
+    <head>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+        <script src="gold-rush.js"> </script>
+        <style>
+        body {
+            position:relative;
+            height:100vw;
+            width:100vw;
+        }
+        
+            .location {
+                height:20px;
+                width:20px;
+                border-radius:10px;
+                background-color:#7FFF00;
+                position:absolute;
+            }
+        </style>
+    </head>
+    <body ng-controller="minion as mini">
+      <div style="height:100%; width:100%"ng-click="mini.addMarker" >
+          <div ng-show="mini.addMarker "class="location"></div>
+      </div>
+          
+    </body>
+</html>
